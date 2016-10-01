@@ -14,7 +14,11 @@ class Geometry::Square
 
 
   def area
-    0
+    if valid?
+      @side * @side
+    else
+      Float::INFINITY
+    end
   end
 
   def valid?

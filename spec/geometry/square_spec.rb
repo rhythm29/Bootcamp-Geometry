@@ -25,6 +25,11 @@ describe Geometry::Square do
       expect(square.area).to eq(0)
     end
 
+    it 'should return 16 if either side is 4' do
+      square = Geometry::Square.new(4)
+      expect(square.area).to eq(16)
+    end
+
   end
 
 
