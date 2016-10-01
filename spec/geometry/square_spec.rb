@@ -19,4 +19,14 @@ describe Geometry::Square do
 
   end
 
+  describe '#area' do
+    it 'should return 0 if either side is 0' do
+      square = Geometry::Square.new(0)
+      expect(square.area).to eq(0)
+    end
+
+  end
+
+
+
 end

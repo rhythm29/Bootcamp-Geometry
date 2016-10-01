@@ -12,6 +12,11 @@ class Geometry::Square
     end
   end
 
+
+  def area
+    0
+  end
+
   def valid?
     @side >= 0
   end
