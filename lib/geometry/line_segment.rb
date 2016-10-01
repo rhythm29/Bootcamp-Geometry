@@ -9,7 +9,6 @@ class Geometry::LineSegment
   end
 
   def length
-    # http://bfy.tw/7wX1
     square_of_length = (x1 - x2)**2 + (y1 - y2)**2
     Math.sqrt(square_of_length)
   end
@@ -17,12 +16,13 @@ class Geometry::LineSegment
   def compare_and_sort(another)
     if self.length >= another.length
      true
-    else 
+    else
       false
-
     end
   end
-
-
-
 end
+
+def <=>(other)
+  self.length <=> other.length
+end
+
