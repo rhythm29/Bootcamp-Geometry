@@ -1,4 +1,4 @@
-class Geometry::Rect
+class Geometry::Rectangle
 
   def initialize(length, width)
     @length = length
