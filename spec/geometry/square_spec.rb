@@ -30,6 +30,11 @@ describe Geometry::Square do
       expect(square.area).to eq(16)
     end
 
+    it 'should return Float::INFINITY if either side is negative' do
+      square = Geometry::Square.new(-4)
+      expect(square.area).to eq(Float::INFINITY)
+    end
+
   end
 
 
