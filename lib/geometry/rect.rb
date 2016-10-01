@@ -1,15 +1,19 @@
 class Geometry::Rectangle
 
+  def self.create_square(side)
+   self.new(side, side)
+  end
+
   def initialize(length, width)
     @length = length
     @width = width
   end
 
   def perimeter
-    if(@length > 0 && @width > 0)
+    if(@length >= 0 && @width >= 0)
     2 * (@length + @width)
     else
-      0
+      Float::INFINITY
     end
   end
 

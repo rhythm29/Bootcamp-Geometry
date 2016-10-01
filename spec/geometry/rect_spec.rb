@@ -14,7 +14,7 @@ describe Geometry::Rectangle do
 
     it 'should return 0 if the values are negative' do
       rect = Geometry::Rectangle.new(-1,-2)
-      expect(rect.perimeter).to eq(0)
+      expect(rect.perimeter).to eq(Float::INFINITY)
     end
 
   end
