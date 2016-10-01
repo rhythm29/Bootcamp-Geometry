@@ -7,7 +7,11 @@ class Geometry::Rect
   end
 
   def perimeter
+    if(length > 0 && width > 0)
     2 * (length + width)
+    else
+      0
+    end
   end
 
 end

@@ -11,5 +11,11 @@ describe Geometry::Rect do
       rect = Geometry::Rect.new(1,2)
       expect(rect.perimeter).to eq(6)
     end
+
+    it 'should return 0 if the values are negative' do
+      rect = Geometry::Rect.new(-1,-2)
+      expect(rect.perimeter).to eq(0)
+    end
+
   end
 end
