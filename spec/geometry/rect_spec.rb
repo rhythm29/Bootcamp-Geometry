@@ -20,14 +20,19 @@ describe Geometry::Rect do
   end
 
   describe '#area' do
-    it'should return 0 if either length or width is 0'do
+    it 'should return 0 if either length or width is 0'do
       rect = Geometry::Rect.new(0,1)
       expect(rect.area).to eq(0)
     end
 
-    it'should return Float::INFINITY if either length or width is negative'do
+    it 'should return Float::INFINITY if either length or width is negative'do
       rect = Geometry::Rect.new(2,-1)
       expect(rect.area).to eq(Float::INFINITY)
+    end
+
+    it 'should return 6 if either length or width is 2 and 3 respectively'do
+      rect = Geometry::Rect.new(2,3)
+      expect(rect.area).to eq(6)
     end
 
   end

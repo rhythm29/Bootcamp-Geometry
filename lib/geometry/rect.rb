@@ -15,7 +15,7 @@ class Geometry::Rect
 
   def area
     if(@length >= 0 && @width >= 0)
-      0
+      @length * @width
     else
       Float::INFINITY
     end
