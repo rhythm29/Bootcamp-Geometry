@@ -1,5 +1,4 @@
 class Geometry::Rect
-  attr_reader :width, :length
 
   def initialize(length, width)
     @length = length
@@ -7,10 +6,18 @@ class Geometry::Rect
   end
 
   def perimeter
-    if(length > 0 && width > 0)
-    2 * (length + width)
+    if(@length > 0 && @width > 0)
+    2 * (@length + @width)
     else
       0
+    end
+  end
+
+  def area
+    if(@length >= 0 && @width >= 0)
+      0
+    else
+      Float::INFINITY
     end
   end
 
