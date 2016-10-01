@@ -15,12 +15,11 @@ class Geometry::LineSegment
   end
 
   def compare_and_sort(another)
-    if self.length == another.length
+    if self.length >= another.length
      true
-    elsif self.length < another.length
+    else #self.length < another.length
       false
-    else
-      true
+
     end
   end
 
