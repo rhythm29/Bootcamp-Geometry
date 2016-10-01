@@ -42,5 +42,14 @@ describe Geometry::LineSegment do
       expect(line_segment1.compare_and_sort(line_segment2)).to eq(true)
     end
 
+    it 'should return true when line segment(0,0,4,0) is bigger than line segment(0,0,1,0) have equal length' do
+      line_segment1 = Geometry::LineSegment.new(0,0,4,0)
+      line_segment2 = Geometry::LineSegment.new(0,0,1,0)
+      line_segment3 = Geometry::LineSegment.new(0,0,5,0)
+      expect(line_segment1.compare_and_sort(line_segment2)).to eq(true)
+      expect(line_segment2.compare_and_sort(line_segment3)).to eq(false)
+
+    end
+
   end
 end
