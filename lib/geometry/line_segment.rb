@@ -14,29 +14,16 @@ class Geometry::LineSegment
     Math.sqrt(square_of_length)
   end
 
-  def compare(another)
+  def compare_and_sort(another)
     if self.length == another.length
-     0
+     true
     elsif self.length < another.length
-      -1
+      false
     else
-      1
-
+      true
     end
-
   end
 
-  def <=>(another)
-    if self.length == another.length
-      0
-    elsif self.length < another.length
-      -1
-    else
-      1
-
-    end
-
-  end
 
 
 end

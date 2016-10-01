@@ -23,25 +23,24 @@ describe Geometry::LineSegment do
     end
   end
 
-  describe '#compare' do
-    it 'should return 0 when both line segments (0,0,4,0 have equal length' do
+  describe '#compare_and_sort' do
+    it 'should return true when both line segments (0,0,4,0) have equal length' do
       line_segment1 = Geometry::LineSegment.new(0,0,4,0)
       line_segment2 = Geometry::LineSegment.new(0,0,4,0)
-      expect(line_segment1.compare(line_segment2)).to eq(0)
+      expect(line_segment1.compare_and_sort(line_segment2)).to eq(true)
     end
 
-    it 'should return -1 when line segment(0,0,1,0) is smaller than line segment(0,0,4,0) have equal length' do
+    it 'should return false when line segment(0,0,1,0) is smaller than line segment(0,0,4,0) have equal length' do
       line_segment1 = Geometry::LineSegment.new(0,0,1,0)
       line_segment2 = Geometry::LineSegment.new(0,0,4,0)
-      expect(line_segment1.compare(line_segment2)).to eq(-1)
+      expect(line_segment1.compare_and_sort(line_segment2)).to eq(false)
     end
 
-    it 'should return 1 when line segment(0,0,4,0) is bigger than line segment(0,0,1,0) have equal length' do
+    it 'should return true when line segment(0,0,4,0) is bigger than line segment(0,0,1,0) have equal length' do
       line_segment1 = Geometry::LineSegment.new(0,0,4,0)
       line_segment2 = Geometry::LineSegment.new(0,0,1,0)
-      expect(line_segment1.compare(line_segment2)).to eq(1)
+      expect(line_segment1.compare_and_sort(line_segment2)).to eq(true)
     end
 
   end
-
 end
